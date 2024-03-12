@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
 image = cv2.imread("./dog.png")
 
@@ -9,9 +9,9 @@ std_dev = 20
 noise = np.random.normal(mean, std_dev, image.shape)
 noisy_image = image + noise.astype(np.uint8)
 
-plt.subplot(131), plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)), plt.title("Original")
-plt.subplot(132), plt.imshow(cv2.cvtColor(noisy_image, cv2.COLOR_BGR2RGB)), plt.title("Noisy")
-plt.show()
+# plt.subplot(131), plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)), plt.title("Original")
+# plt.subplot(132), plt.imshow(cv2.cvtColor(noisy_image, cv2.COLOR_BGR2RGB)), plt.title("Noisy")
+# plt.show()
 
 kernel_size = 10
 average_filter = np.ones((kernel_size, kernel_size), np.float32) / (kernel_size * kernel_size)

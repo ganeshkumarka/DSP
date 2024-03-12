@@ -10,7 +10,6 @@ def save_image(img, path):
     print("Image saved successfully.")
 
 if __name__ == "__main__":
-    print("hello")
     # Read the image
     img = cv2.imread("mammootty.jpg")
 
